@@ -9,12 +9,20 @@ export interface City {
 export interface WeatherSnapshot {
   id: number;
   city_id: number;
+
+  // Core fields returned by the backend
   temperature: number;
   windspeed: number;
   precipitation: number;
   weather_code: number;
   recorded_at: string;
   synced_at: string;
+
+  // Optional extended fields (Open-Meteo extras — may be added in future backend versions)
+  temperature_2m?: number;
+  windspeed_10m?: number;
+  apparent_temperature?: number;
+  relative_humidity_2m?: number;
 }
 
 export interface WeatherResponse {

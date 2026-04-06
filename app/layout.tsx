@@ -1,12 +1,16 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import Providers from '@/components/Providers';
+import MobileThemeForcer from '@/components/MobileThemeForcer';
+import { getThemeCssVars } from '@/lib/theme';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
   title: 'Weather Dashboard',
   description: 'Real-time weather dashboard powered by Open-Meteo',
+  viewport: 'width=device-width, initial-scale=1, viewport-fit=cover',
 };
 
 export default function RootLayout({
@@ -14,9 +18,21 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const cssVars = getThemeCssVars();
+
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Inject theme CSS custom properties — edit theme.config.json to change */}
+        <style dangerouslySetInnerHTML={{ __html: cssVars }} />
+      </head>
+      <body className={`${inter.variable} font-sans`}>
+        <Providers>
+          {/* Forces dark theme on mobile (≤ 430 px) */}
+          <MobileThemeForcer />
+          {children}
+        </Providers>
+      </body>
     </html>
   );
 }

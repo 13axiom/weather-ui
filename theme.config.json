@@ -1,0 +1,88 @@
+{
+  "_comment": "Weather Dashboard Theme Config. Edit values and restart dev server to apply.",
+  "_docs": {
+    "activeTheme": "Name of the theme to use. Options: cosmic | aurora | neon-city",
+    "borderRadius": "Widget corner radius. '1.5rem' = rounded, '0.25rem' = sharp, '9999px' = pill",
+    "themes": "Color palettes. Each theme has dark/light variants.",
+    "primary": "Main brand color — used for buttons and highlights",
+    "secondary": "Secondary accent — used for charts and icons",
+    "accent": "Third accent — used for the spinning border gradient",
+    "headingDark": "Color of h1/h2 headings in dark mode",
+    "headingLight": "Color of h1/h2 headings in light mode"
+  },
+
+  "activeTheme": "cosmic",
+
+  "borderRadius": {
+    "widget": "1.5rem",
+    "button": "9999px",
+    "chart": "1rem",
+    "badge": "0.5rem"
+  },
+
+  "themes": {
+    "cosmic": {
+      "_name": "Cosmic Purple — deep space, purple + cyan + fuchsia",
+      "primary":        "#7C3AED",
+      "primaryGlow":    "rgba(124, 58, 237, 0.35)",
+      "secondary":      "#06B6D4",
+      "secondaryGlow":  "rgba(6, 182, 212, 0.25)",
+      "accent":         "#EC4899",
+      "accentGlow":     "rgba(236, 72, 153, 0.25)",
+      "success":        "#10B981",
+      "backgroundDark": "#08080F",
+      "backgroundLight":"#F0F4FF",
+      "surfaceDark":    "rgba(255, 255, 255, 0.04)",
+      "surfaceLight":   "rgba(255, 255, 255, 0.75)",
+      "borderDark":     "rgba(255, 255, 255, 0.08)",
+      "borderLight":    "rgba(0, 0, 0, 0.08)",
+      "headingDark":    "#C4B5FD",
+      "headingLight":   "#5B21B6",
+      "orb1":           "#7C3AED",
+      "orb2":           "#06B6D4",
+      "orb3":           "#EC4899"
+    },
+    "aurora": {
+      "_name": "Aurora Green — northern lights, green + blue + fuchsia",
+      "primary":        "#10B981",
+      "primaryGlow":    "rgba(16, 185, 129, 0.35)",
+      "secondary":      "#3B82F6",
+      "secondaryGlow":  "rgba(59, 130, 246, 0.25)",
+      "accent":         "#EC4899",
+      "accentGlow":     "rgba(236, 72, 153, 0.25)",
+      "success":        "#06B6D4",
+      "backgroundDark": "#020F0A",
+      "backgroundLight":"#F0FDF4",
+      "surfaceDark":    "rgba(255, 255, 255, 0.04)",
+      "surfaceLight":   "rgba(255, 255, 255, 0.75)",
+      "borderDark":     "rgba(255, 255, 255, 0.08)",
+      "borderLight":    "rgba(0, 0, 0, 0.08)",
+      "headingDark":    "#6EE7B7",
+      "headingLight":   "#065F46",
+      "orb1":           "#10B981",
+      "orb2":           "#3B82F6",
+      "orb3":           "#EC4899"
+    },
+    "neon-city": {
+      "_name": "Neon City — cyberpunk, fuchsia + violet + cyan",
+      "primary":        "#EC4899",
+      "primaryGlow":    "rgba(236, 72, 153, 0.35)",
+      "secondary":      "#8B5CF6",
+      "secondaryGlow":  "rgba(139, 92, 246, 0.25)",
+      "accent":         "#06B6D4",
+      "accentGlow":     "rgba(6, 182, 212, 0.25)",
+      "success":        "#10B981",
+      "backgroundDark": "#0F0014",
+      "backgroundLight":"#FFF0F9",
+      "surfaceDark":    "rgba(255, 255, 255, 0.04)",
+      "surfaceLight":   "rgba(255, 255, 255, 0.75)",
+      "borderDark":     "rgba(255, 255, 255, 0.08)",
+      "borderLight":    "rgba(0, 0, 0, 0.08)",
+      "headingDark":    "#F9A8D4",
+      "headingLight":   "#9D174D",
+      "orb1":           "#EC4899",
+      "orb2":           "#8B5CF6",
+      "orb3":           "#06B6D4"
+    }
+  }
+}
