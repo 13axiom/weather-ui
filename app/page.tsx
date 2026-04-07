@@ -292,10 +292,10 @@ export default function LandingPage() {
           className="text-center"
         >
           <h1 className="theme-heading text-4xl sm:text-5xl mb-2">
-            Weather Dashboard
+            Running Portal
           </h1>
           <p className="text-sm sm:text-base" style={{ color: 'var(--text-muted)' }}>
-            Real-time data · Open-Meteo · No API key needed
+            Weather · Air Quality · Race Calendar · St. Petersburg &amp; Cyprus
           </p>
         </motion.div>
 
@@ -307,21 +307,48 @@ export default function LandingPage() {
               initial={{ opacity: 0, y: 28 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.65, ease: 'easeOut' }}
-              className="flex flex-col sm:flex-row gap-4 items-center"
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: '12px',
+              }}
               onClick={e => e.stopPropagation()}
             >
-              <Link
-                href="/city"
-                className="btn-neon text-base px-10 py-3 w-52 sm:w-auto text-center"
-              >
-                🌆 City View
-              </Link>
-              <Link
-                href="/dashboard"
-                className="btn-neon btn-neon-outline text-base px-10 py-3 w-52 sm:w-auto text-center"
-              >
-                🗺 All Cities
-              </Link>
+              {/* Primary row */}
+              <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', justifyContent: 'center' }}>
+                <Link
+                  href="/city"
+                  className="btn-neon text-base px-10 py-3 text-center"
+                  style={{ minWidth: '160px' }}
+                >
+                  City View
+                </Link>
+                <Link
+                  href="/dashboard"
+                  className="btn-neon btn-neon-outline text-base px-10 py-3 text-center"
+                  style={{ minWidth: '160px' }}
+                >
+                  All Cities
+                </Link>
+              </div>
+              {/* Secondary row */}
+              <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', justifyContent: 'center' }}>
+                <Link
+                  href="/air"
+                  className="btn-neon btn-neon-outline text-base px-10 py-3 text-center"
+                  style={{ minWidth: '160px' }}
+                >
+                  Air Quality
+                </Link>
+                <Link
+                  href="/races"
+                  className="btn-neon btn-neon-outline text-base px-10 py-3 text-center"
+                  style={{ minWidth: '160px' }}
+                >
+                  Running Calendar
+                </Link>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>

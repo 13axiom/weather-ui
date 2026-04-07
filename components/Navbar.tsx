@@ -5,9 +5,11 @@ import { usePathname } from 'next/navigation';
 import ThemeToggle from './ThemeToggle';
 
 const links = [
-  { href: '/',          label: 'Home'       },
-  { href: '/city',      label: 'City View'  },
-  { href: '/dashboard', label: 'All Cities' },
+  { href: '/',          label: 'Home'             },
+  { href: '/city',      label: 'City View'        },
+  { href: '/dashboard', label: 'All Cities'       },
+  { href: '/air',       label: 'Air Quality'      },
+  { href: '/races',     label: 'Running Calendar' },
 ];
 
 export default function Navbar() {
@@ -46,7 +48,7 @@ export default function Navbar() {
           flexShrink:     0,
           lineHeight:     1,
         }}>
-          ⛈ Weather
+          Running Portal
         </Link>
 
         {/* Nav links — single label, no duplication */}
