@@ -8,8 +8,8 @@ import { getThemeCssVars } from '@/lib/theme';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
-  title: 'Weather Dashboard',
-  description: 'Real-time weather dashboard powered by Open-Meteo',
+  title: 'Running Portal',
+  description: 'Weather, air quality and running calendar for St. Petersburg & Cyprus',
   viewport: 'width=device-width, initial-scale=1, viewport-fit=cover',
 };
 
